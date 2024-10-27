@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категорії</title>
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="categories.html">Категорії</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="register">
+            <button onclick="openModal()">Sign in</button>
+        </div>
+        
+        <div id="modalWindow" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close-modal" onclick="closeModal()">X</button>
+                    <mdh>Реєстрація</mdh>
+                </div>
+                <form action="submit_registration.php" method="POST">
+                    <div class="input-modal">
+                        <label for="username">Логін:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-modal">
+                        <label for="confirm-password">Підтвердіть пароль:</label>
+                        <input type="password" id="confirm-password" name="confirm_password" required>
+                    </div>
+                    <button type="submit" class="register-modal" onclick="closeModal()">Зареєструватись</button>
+                </form>
+            </div> 
+            
+        </div>
+        <script src="script.js"></script>
+
+    </header>
+
+    <main>
+        <section class="categories">
+            <h1>Категорії</h1>
+            <div class="category-buttons">
+                <button onclick="scrollToSection('cars')">Авто</button>
+                <button onclick="scrollToSection('houses')">Будинки</button>
+                <button onclick="scrollToSection('other')">Інше</button>
+            </div>
+
+            <section id="cars">
+                <h2>Авто</h2>
+                <div class="item-grid">
+                    <div class="item">
+                        <div class="card">
+                            <img src="car1.jpg" class="card-img-top" alt="car1">
+                            <div class="card-body">
+                              <h5 class="card-title">KIA SUV</h5>
+                              <p class="card-text">700грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="car2.jpg" class="card-img-top" alt="car2">
+                            <div class="card-body">
+                              <h5 class="card-title">Maserati MC20</h5>
+                              <p class="card-text">911грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <dic class="card">
+                            <img src="car3.jpg" class="card-img-top" alt="car3">
+                            <div class="card-body">
+                              <h5 class="card-title">BMW XM 2024</h5>
+                              <p class="card-text">420грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="houses">
+                <h2>Будинки</h2>
+                <div class="item-grid">
+                    <div class="item">
+                        <div class="card">
+                            <img src="house1.jpg" class="card-img-top" alt="house1">
+                            <div class="card-body">
+                              <h5 class="card-title">Mansion</h5>
+                              <p class="card-text">700грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="house2.jpg" class="card-img-top" alt="house2">
+                            <div class="card-body">
+                              <h5 class="card-title">House</h5>
+                              <p class="card-text">911грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <dic class="card">
+                            <img src="house3.jpg" class="card-img-top" alt="house3">
+                            <div class="card-body">
+                              <h5 class="card-title">Villa</h5>
+                              <p class="card-text">420грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="other">
+                <h2>Інше</h2>
+                <div class="item-grid">
+                    <div class="item">
+                        <div class="card">
+                            <img src="motel.jpg" class="card-img-top" alt="motel">
+                            <div class="card-body">
+                              <h5 class="card-title">Motel</h5>
+                              <p class="card-text">700грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="bike.jpg" class="card-img-top" alt="bike">
+                            <div class="card-body">
+                              <h5 class="card-title">Bike</h5>
+                              <p class="card-text">69грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <dic class="card">
+                            <img src="tent.jpg" class="card-img-top" alt="tent">
+                            <div class="card-body">
+                              <h5 class="card-title">Tent</h5>
+                              <p class="card-text">120грн/день</p>
+                              <a href="#" class="btn btn-primary">Орендувати</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <button class="scroll-to-top" onclick="scrollToTop()">На гору</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>All right served</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/_vladichok?igsh=MXRlODVkeDlpcXBwaQ==">Instagram</a> |
+            <a href="https://t.me/vladichok_v">Telegram</a> |
+            <a href="tel:+380661657044">+38-(066)-165-670-44</a>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () {
+            displayTopButton()
+        }
+        let topButton = document.getElementsByClassName("scroll-to-top")[0];
+
+        function displayTopButton() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</html>

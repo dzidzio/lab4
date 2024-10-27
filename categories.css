@@ -1,0 +1,133 @@
+.categories h1 {
+    text-align: center;
+    color: #4b2e83;
+    padding: 2%;
+}
+
+h2{
+    color: #4b2e83;
+    padding-left: 3%;
+}
+
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4b2e83;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50px;
+}
+
+.category-buttons button:hover {
+    background-color: #6a3fb4;
+}
+
+.item-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.item {
+    text-align: center;
+}
+
+.item p{
+    font-size: large;
+}
+.card {
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.489);
+}
+
+.scroll-to-top {
+    padding: 10px 20px;
+    background-color: #4b2e83;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 100%;
+    display: block;
+    margin-left: auto;
+    border-radius: 50px;
+    margin-right:50px;
+    margin-bottom:30px;
+    margin-top: 20px;
+    width: auto;
+    z-index: 100;
+    position: fixed;
+    right: 5rem;
+    bottom: 1rem;
+    display: none;
+}
+.scroll-to-top:hover{
+    background-color: #6a3fb4;
+}
+
+@media screen and (min-width:1020px) and (max-width: 1200px) {
+    .card {
+        width: 300px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width:770px) and (max-width: 1020px) {
+    .card {
+        width: 220px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 770px) {
+    .card {
+        width: 190px;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    .card {
+        width: 130px;
+        height: 75px;
+        border-radius: 10px;
+    }
+    .card h5{
+        font-size: medium;
+    }
+    .card p{
+        font-size: small;
+    }
+    .card a{
+        font-size: small;
+    }
+    
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .card {
+        width: 250px;
+        height: 143px;
+        border-radius: 10px;
+        margin: 5%;
+    }
+    .item-grid {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+    }
+    .category-buttons button{
+        font-size: small;
+    }
+}
